@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .main{
+            background: -moz-radial-gradient( rgb(249,163,12) 91%, rgb(255,202,110) 100%);
+            background: radial-gradient( rgb(249,163,12) 91%, rgb(255,202,110) 100%);
+            width: 168px;
+            height: 168px;
+        }
+    </style>
+</head>
+<body>
+<canvas id="myCanvas">
+</canvas>
+
+<script type="text/javascript" src="dist/Mcanvas.js"></script>
+<script>
+    var  cvs = new Mcanvas2d(document.getElementById('myCanvas'),{
+        width: 200,
+        height: 100
+    });
+
+    cvs.drawText('15%', {
+        color: "#0ac2b5"
+        //font: "20px 微软雅黑",
+    });
+    cvs.drawLoop({
+        percent: 0.7,//百分比
+        lineWidth: 5,//线条宽度
+        colorType: 2,//线条颜色类型，2是径向渐变
+
+    });
+</script>
+</body>
+</html>
